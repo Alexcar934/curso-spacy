@@ -1,0 +1,59 @@
+Entramos en spacy.io/usage
+
+pip install -U pip setuptools wheel
+
+¿Qué hace?
+
+Actualiza herramientas básicas del ecosistema Python.
+
+pip
+Es el gestor de paquetes. Sirve para instalar librerías (pip install X).
+
+setuptools
+Es lo que permite que muchos paquetes se “construyan” e instalen correctamente.
+
+wheel
+Define el formato .whl, que son paquetes ya compilados → instalación más rápida y menos errores.
+
+pip install -U spacy 
+#instalas spacy
+
+## python -m spacy download en_core_web_sm
+
+python -m spacy
+
+Ejecuta spaCy como un módulo, no como un script cualquiera.
+Esto garantiza que usa el spaCy del entorno activo (muy importante si usas venv).
+
+download
+
+Es un comando interno de spaCy.
+
+en_core_web_sm
+
+Es el modelo de lenguaje:
+
+en → inglés
+
+core → modelo general
+
+web → entrenado con texto web
+
+sm → small (pequeño, rápido, menos preciso)
+
+Este modelo incluye:
+
+Tokenizador
+
+POS tagging
+
+Named Entity Recognition
+
+Dependencias sintácticas
+
+spacy containers:
+
+nlp = spacy.load('en_core_web_sm')
+
+Containers son spacy objects que contienen gran cantidad de datos sobre un texto. tipos diferenteS: doc docBin, Example, Language, Lexeme, Span, SpanGroup, Token 
+
